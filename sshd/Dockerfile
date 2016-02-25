@@ -1,6 +1,9 @@
 FROM debian:jessie
 MAINTAINER drupal-docker <info@drupaldocker.org>
 
+VOLUME /var/www/html
+WORKDIR /var/www/html
+
 ADD run.sh /root/run.sh
 
 RUN apt-get update && apt-get install -y openssh-server pwgen \
