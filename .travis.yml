@@ -1,0 +1,18 @@
+sudo: required
+
+services:
+  - docker
+
+env:
+  matrix:
+    - UTIL="sshd"
+
+before_script:
+  - docker version
+  - cd ${UTIL}
+
+script:
+  - docker build -t ${UTIL} .
+
+after_script:
+  - docker images
