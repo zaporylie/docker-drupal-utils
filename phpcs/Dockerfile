@@ -1,7 +1,7 @@
 FROM drupaldocker/php:cli
 MAINTAINER drupal-docker <info@drupaldocker.org>
 
-ADD run.sh .phpcs.yml /root/run.sh
+ADD run.sh .phpcs.yml /root/
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
   && apt-get -yq install shunit2 curl git \
