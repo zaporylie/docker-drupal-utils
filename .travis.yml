@@ -6,6 +6,7 @@ services:
 env:
   matrix:
     - UTIL="sshd"
+    - UTIL="phpcs"
 
 before_script:
   - docker version
