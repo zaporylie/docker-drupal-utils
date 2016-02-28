@@ -7,6 +7,9 @@ env:
   matrix:
     - UTIL="sshd"
     - UTIL="phpcs"
+    - UTIL="git"
+    - UTIL="git/clone"
+    - UTIL="git/pull"
 
 before_script:
   - docker version
