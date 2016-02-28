@@ -16,3 +16,26 @@ Get access to /var/www/html from another php container:
 ```
 docker run -dP --volumes-from=<your-php-container> zaporylie/sshd
 ```
+
+## GIT
+
+### Auto
+
+Automatically discover if repository exists and pull or clone (according to the result)
+```
+docker run --rm --ti --volumes-from=<app-data-container> zaporylie/git
+```
+
+### Clone
+
+Clone repository to /var/www/html:
+```
+docker run --rm --ti --volumes-from=<app-data-container> zaporylie/git:clone
+```
+
+### Pull
+
+Pull (fetch + merge) remote repository:
+```
+docker run --rm --ti --volumes-from=<app-data-container> zaporylie/git:pull
+```
