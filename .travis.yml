@@ -11,6 +11,7 @@ env:
     - UTIL="git/clone"
     - UTIL="git/pull"
     - UTIL="backup"
+    - UTIL="backup/restore"
 
 before_script:
   - docker version
