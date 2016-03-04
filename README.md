@@ -39,3 +39,10 @@ Pull (fetch + merge) remote repository:
 ```
 docker run --rm --ti --volumes-from=<app-data-container> zaporylie/git:pull
 ```
+
+## Backup
+
+Backup public and private folders + database and store in current path:
+```
+docker run --rm --ti --volumes-from=<app-data-container> --link=<your-mysql-container>:db -v $(pwd):/var/backups zaporylie/backup
+```
