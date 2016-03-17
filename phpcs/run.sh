@@ -93,6 +93,11 @@ if [ ! -z "${config_standard}" ]; then
   	PARAMS="$PARAMS --standard=${config_standard}"
 fi
 
+# ignore
+if [ ! -z "${config_ignore}" ]; then
+    PARAMS="$PARAMS --ignore=$(join , ${config_ignore[@]})"
+fi
+
 # extensions
 if [ ! -z "${config_extensions}" ]; then
     PARAMS="$PARAMS --extensions=$(join , ${config_extensions[@]})"
