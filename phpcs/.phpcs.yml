@@ -9,6 +9,9 @@ colors: true
 standard: "$HOME/.composer/vendor/drupal/coder/coder_sniffer/Drupal"
 report: full
 report-checkstyle: "/root/checkstyle-result.xml"
+ignore:
+  - *.ignore
+  # - */static/*
 extensions:
   - php
   - module
